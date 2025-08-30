@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neutral Reader Prototype</title>
+    <link rel="stylesheet" href="neutral-reader.css">
+</head>
+<body data-state="1">
+    <!-- Step Controller -->
+    <div class="step-controller">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <!-- Facebook Post Container -->
+    <div class="facebook-container">
+        <!-- Post Header -->
+        <div class="post-header">
+            <div class="post-header-left">
+                <div class="user-avatar user1">NM</div>
+                <div class="post-info">
+                    <h3 class="user-name">Nguyễn Minh</h3>
+                    <div class="post-time">
+                        <span>38 phút</span>
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-header-right">
+                <button class="more-options">
+                    <i class="fas fa-ellipsis-h"></i>
+                </button>
+                <button class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p class="post-text">Uống say thì nhót thâu 🍺🍺</p>
+        </div>
+
+        <!-- News Article Card -->
+        <a href="https://vnexpress.net/hiep-dam-be-gai-say-ruou-4566478.html" target="_blank" class="news-card-link">
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="images/news-thumbnail.jpg" alt="Xâm hại tình dục bé gái say rượu" class="news-thumbnail">
+                </div>
+                <div class="news-content">
+                    <div class="news-source">VNEXPRESS.NET</div>
+                    <div class="news-title-container">
+                        <h2 class="news-title" id="headline">Xâm hại tình dục <span class="nr-grey nr-underline" id="grey-phrase">bé gái say rượu</span></h2>
+                        <div id="nr-badge" role="button" tabindex="0" aria-label="Xem gợi ý trung lập">NR!</div>
+                        
+                        <!-- Popover -->
+                        <div id="nr-popover" aria-live="polite">
+                            <div class="popover-row">
+                                <div class="popover-label">Original</div>
+                                <div class="popover-text">Xâm hại tình dục <span class="nr-grey nr-underline">bé gái say rượu</span></div>
+                            </div>
+                            <div class="popover-arrow">→</div>
+                            <div class="popover-row">
+                                <div class="popover-label">Neutral</div>
+                                <div class="popover-text">Cơ quan chức năng điều tra cáo buộc tấn công tình dục một bé gái</div>
+                            </div>
+                            <div class="popover-row">
+                                <div class="popover-label">Annotations</div>
+                                <ul class="annotation-list">
+                                    <li>Không đưa trạng thái của nạn nhân vào tiêu đề khi không cần cho việc hiểu hành vi</li>
+                                    <li>Tiêu đề tập trung vào hành vi và tiến trình điều tra, giữ nguyên sự kiện</li>
+                                </ul>
+                            </div>
+                            <div class="popover-buttons">
+                                <button class="popover-button" id="share-btn">Share</button>
+                                <button class="popover-button secondary" id="close-btn">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="news-description">Phan Văn Đẹp, 21 tuổi, bị cáo buộc lợi dụng lúc bé gái 15 tuổi say rượu để có hành vi hiếp dâm.</p>
+                </div>
+            </div>
+        </a>
+
+        <!-- Engagement Stats -->
+        <div class="engagement-stats">
+            <div class="reactions">
+                <div class="reaction-icons">
+                    <span class="reaction like">👍</span>
+                    <span class="reaction love">❤️</span>
+                    <span class="reaction haha">😆</span>
+                </div>
+                <span class="reaction-count">Bạn và 3 người khác</span>
+            </div>
+            <div class="comments-shares">
+                <span class="comment-count">6 bình luận</span>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="action-btn like-btn">
+                <i class="far fa-thumbs-up"></i>
+                <span>Thích</span>
+            </button>
+            <button class="action-btn comment-btn">
+                <i class="far fa-comment"></i>
+                <span>Bình luận</span>
+            </button>
+            <button class="action-btn share-btn">
+                <i class="far fa-share"></i>
+                <span>Chia sẻ</span>
+            </button>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="comments-section">
+            <div class="comments-header">
+                <span>Phù hợp nhất</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <!-- Comment 1 -->
+            <div class="comment">
+                <div class="comment-avatar user2">TP</div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <strong>Nguyen Thanh Phung</strong>
+                        <p>Xứng đáng</p>
+                    </div>
+                    <div class="comment-actions">
+                        <span class="comment-time">41 phút</span>
+                        <button class="comment-action">Thích</button>
+                        <button class="comment-action">Trả lời</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment 2 -->
+            <div class="comment">
+                <div class="comment-avatar user3">HP</div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <strong>Hồng Phúc</strong>
+                        <p>Say rượu rồi thì chịu thôi</p>
+                    </div>
+                    <div class="comment-actions">
+                        <span class="comment-time">41 phút</span>
+                        <button class="comment-action">Thích</button>
+                        <button class="comment-action">Trả lời</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment 3 -->
+            <div class="comment">
+                <div class="comment-avatar user4">HP</div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <strong>Hồng Phúc</strong>
+                        <p>Vứa lắm</p>
+                    </div>
+                    <div class="comment-actions">
+                        <span class="comment-time">41 phút</span>
+                        <button class="comment-action">Thích</button>
+                        <button class="comment-action">Trả lời</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment 4 -->
+            <div class="comment">
+                <div class="comment-avatar user5">PĐ</div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <strong>Phương Đăng</strong>
+                        <p>Chả hiểu bây giờ trẻ nghĩ gì</p>
+                        <p>Đã chơi khuyá còn say xỉn thì rằng chịu thôi</p>
+                    </div>
+                    <div class="comment-actions">
+                        <span class="comment-time">30 phút</span>
+                        <button class="comment-action">Haha</button>
+                        <button class="comment-action">Trả lời</button>
+                        <span class="reaction-emoji">😆</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment 5 -->
+            <div class="comment">
+                <div class="comment-avatar user6">MC</div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <strong>Mai Cường</strong>
+                        <p>Chỉ này nói đúng ý tui 😂 +1 like</p>
+                    </div>
+                    <div class="comment-actions">
+                        <span class="comment-time">3 phút</span>
+                        <button class="comment-action">Thích</button>
+                        <button class="comment-action">Trả lời</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Write Comment -->
+            <div class="write-comment">
+                <div class="comment-avatar user1">NM</div>
+                <div class="comment-input-container">
+                    <input type="text" placeholder="Bình luận dưới tên Nguyễn Minh" class="comment-input">
+                    <div class="comment-input-actions">
+                        <button class="emoji-btn">😊</button>
+                        <button class="camera-btn">📷</button>
+                        <button class="gif-btn">GIF</button>
+                        <button class="sticker-btn">😀</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div id="share-modal" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Chia sẻ bài viết</div>
+                <button class="modal-close" id="modal-close">×</button>
+            </div>
+            <div class="modal-body">
+                <textarea class="composer-textarea" id="composer-text" placeholder="Bạn đang nghĩ gì?">Original: Xâm hại tình dục bé gái say rượu
+Neutral: Cơ quan chức năng điều tra cáo buộc tấn công tình dục một bé gái</textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-button secondary" id="modal-cancel">Cancel</button>
+                <button class="modal-button primary" id="modal-post">Post</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast">Đã chia sẻ phiên bản trung lập</div>
+
+    <script>
+        // State management
+        let currentState = 1;
+        const maxState = 5;
+
+        // Elements
+        const body = document.body;
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+        const resetBtn = document.getElementById('reset');
+        const nrBadge = document.getElementById('nr-badge');
+        const shareBtn = document.getElementById('share-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const shareModal = document.getElementById('share-modal');
+        const modalClose = document.getElementById('modal-close');
+        const modalCancel = document.getElementById('modal-cancel');
+        const modalPost = document.getElementById('modal-post');
+        const toast = document.getElementById('toast');
+
+        // State machine
+        function setState(newState) {
+            if (newState < 1) newState = 1;
+            if (newState > maxState) newState = maxState;
+            
+            currentState = newState;
+            body.setAttribute('data-state', newState.toString());
+            
+            // Update button states
+            prevBtn.disabled = currentState === 1;
+            nextBtn.disabled = currentState === maxState;
+            
+            console.log('State changed to:', currentState);
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', () => setState(currentState - 1));
+        nextBtn.addEventListener('click', () => setState(currentState + 1));
+        resetBtn.addEventListener('click', () => setState(1));
+
+        // Badge click - move to state 4 if in state 2 or 3
+        function handleBadgeClick() {
+            if (currentState === 2 || currentState === 3) {
+                setState(4);
+            }
+        }
+
+        nrBadge.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            handleBadgeClick();
+        });
+        nrBadge.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                e.stopPropagation();
+                handleBadgeClick();
+            }
+        });
+
+        // Popover buttons
+        shareBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setState(5); // This closes the popover and shows the modal
+        });
+        closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setState(2);
+        });
+
+        // Prevent popover clicks from bubbling to the news link
+        const nrPopover = document.getElementById('nr-popover');
+        nrPopover.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        // Modal buttons
+        modalClose.addEventListener('click', () => setState(4));
+        modalCancel.addEventListener('click', () => setState(4));
+        
+        modalPost.addEventListener('click', () => {
+            // Show toast
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+                setState(2);
+            }, 2000);
+        });
+
+        // Modal overlay click to close
+        shareModal.addEventListener('click', (e) => {
+            if (e.target === shareModal) {
+                setState(4);
+            }
+        });
+
+        // Focus management for modal
+        function trapFocus(modal) {
+            const focusableElements = modal.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            modal.addEventListener('keydown', (e) => {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstElement) {
+                            e.preventDefault();
+                            lastElement.focus();
+                        }
+                    } else {
+                        if (document.activeElement === lastElement) {
+                            e.preventDefault();
+                            firstElement.focus();
+                        }
+                    }
+                }
+                if (e.key === 'Escape') {
+                    setState(4);
+                }
+            });
+        }
+
+        // Initialize focus trap for modal
+        trapFocus(shareModal);
+
+        // Initialize state
+        setState(1);
+
+        // Auto-advance to state 3 when in state 2 (for demo purposes)
+        // This simulates the "hover pulse" suggestion
+        setInterval(() => {
+            if (currentState === 2) {
+                setState(3);
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<script>start("/Users/nhatminh.nguyen/server/facebook/images/");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("news-thumbnail.jpg","news-thumbnail.jpg",0,205150,"200 kB",1756563125,"8/30/25, 9:12:05 PM");</script>
+<script>addRow("news-thumbnail.svg","news-thumbnail.svg",0,790,"790 B",1756563017,"8/30/25, 9:10:17 PM");</script>
