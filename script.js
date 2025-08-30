@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="comment-avatar user1">NM</div>
             <div class="comment-content">
                 <div class="comment-bubble">
-                    <strong>Nguyễn Minh</strong>
+                    <strong>Nguyen Mien</strong>
                     <p>${text}</p>
                 </div>
                 <div class="comment-actions">

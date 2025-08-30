@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài viết của Nguyen Mien</title>
-    <link rel="stylesheet" href="facebook-post.css">
+    <title>Safe Mode - Bài viết của Nguyen Mien</title>
+    <link rel="stylesheet" href="safemode.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -45,31 +45,12 @@
                 <div class="news-content">
                     <div class="news-source">VNEXPRESS.NET</div>
                     <div class="news-title-container">
-                        <h2 class="news-title" id="headline">Xâm hại tình dục <span class="nr-grey nr-underline" id="grey-phrase">bé gái say rượu</span></h2>
-                        <div id="nr-badge" role="button" tabindex="0" aria-label="Xem gợi ý trung lập">NR!</div>
-                        
-                        <!-- Popover -->
-                        <div id="nr-popover" aria-live="polite">
-                            <div class="popover-row">
-                                <div class="popover-label">Original</div>
-                                <div class="popover-text">Xâm hại tình dục <span class="nr-grey nr-underline">bé gái say rượu</span></div>
-                            </div>
-                            <div class="popover-arrow">→</div>
-                            <div class="popover-row">
-                                <div class="popover-label">Neutral</div>
-                                <div class="popover-text">Cơ quan chức năng điều tra cáo buộc tấn công tình dục một bé gái</div>
-                            </div>
-                            <div class="popover-row">
-                                <div class="popover-label">Annotations</div>
-                                <ul class="annotation-list">
-                                    <li>Không đưa trạng thái của nạn nhân vào tiêu đề khi không cần cho việc hiểu hành vi</li>
-                                    <li>Tiêu đề tập trung vào hành vi và tiến trình điều tra, giữ nguyên sự kiện</li>
-                                </ul>
-                            </div>
-                            <div class="popover-buttons">
-                                <button class="popover-button" id="share-btn">Share</button>
-                                <button class="popover-button secondary" id="close-btn">Close</button>
-                            </div>
+                        <h2 class="news-title" id="headline">
+                            <span class="original-headline">Xâm hại tình dục bé gái say rượu</span>
+                            <span class="safe-headline" style="display: none;">Cơ quan chức năng điều tra cáo buộc tấn công tình dục một bé gái</span>
+                        </h2>
+                        <div id="nr-title-badge" class="nr-title-badge" style="display: none;" role="button" tabindex="0" aria-label="Tiêu đề đã được diễn giải theo chính sách Safe Mode">
+                            NR!
                         </div>
                     </div>
                     <p class="news-description">Phan Văn Đẹp, 21 tuổi, bị cáo buộc lợi dụng lúc bé gái 15 tuổi say rượu để có hành vi hiếp dâm.</p>
@@ -116,12 +97,21 @@
             </div>
 
             <!-- Comment 1 -->
-            <div class="comment">
+            <div class="comment censored-comment" data-original="Xứng đáng" data-reason="victim-blaming">
                 <div class="comment-avatar user2">TP</div>
                 <div class="comment-content">
-                    <div class="comment-bubble">
+                    <div class="comment-bubble original-comment">
                         <strong>Thanh Phan</strong>
                         <p>Xứng đáng</p>
+                    </div>
+                    <div class="comment-bubble censored-comment-overlay">
+                        <strong>Thanh Phan</strong>
+                        <div class="censored-full-comment">
+                            <span class="censored-mask">Xứng đáng</span>
+                            <button class="sensitive-icon" aria-label="Nội dung đã được kiểm duyệt">
+                                <i class="fas fa-eye-slash"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="comment-actions">
                         <span class="comment-time">41 phút</span>
@@ -132,12 +122,21 @@
             </div>
 
             <!-- Comment 2 -->
-            <div class="comment">
+            <div class="comment censored-comment" data-original="Say rượu rồi thì chịu thôi" data-reason="victim-blaming">
                 <div class="comment-avatar user3">HP</div>
                 <div class="comment-content">
-                    <div class="comment-bubble">
+                    <div class="comment-bubble original-comment">
                         <strong>Hung Phu</strong>
                         <p>Say rượu rồi thì chịu thôi</p>
+                    </div>
+                    <div class="comment-bubble censored-comment-overlay">
+                        <strong>Hung Phu</strong>
+                        <div class="censored-full-comment">
+                            <span class="censored-mask">Say rượu rồi thì chịu thôi</span>
+                            <button class="sensitive-icon" aria-label="Nội dung đã được kiểm duyệt">
+                                <i class="fas fa-eye-slash"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="comment-actions">
                         <span class="comment-time">41 phút</span>
@@ -148,12 +147,21 @@
             </div>
 
             <!-- Comment 3 -->
-            <div class="comment">
+            <div class="comment censored-comment" data-original="Zừa lắm" data-reason="inappropriate">
                 <div class="comment-avatar user4">HP</div>
                 <div class="comment-content">
-                    <div class="comment-bubble">
+                    <div class="comment-bubble original-comment">
                         <strong>Hung Phu</strong>
                         <p>Zừa lắm</p>
+                    </div>
+                    <div class="comment-bubble censored-comment-overlay">
+                        <strong>Hung Phu</strong>
+                        <div class="censored-full-comment">
+                            <span class="censored-mask">Zừa lắm</span>
+                            <button class="sensitive-icon" aria-label="Nội dung đã được kiểm duyệt">
+                                <i class="fas fa-eye-slash"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="comment-actions">
                         <span class="comment-time">41 phút</span>
@@ -164,13 +172,22 @@
             </div>
 
             <!-- Comment 4 -->
-            <div class="comment">
+            <div class="comment censored-comment" data-original="Chả hiểu bây giờ trẻ nghĩ gì. Đã chơi khuya còn say xỉn thì rằng chịu thôi" data-reason="victim-blaming">
                 <div class="comment-avatar user5">PĐ</div>
                 <div class="comment-content">
-                    <div class="comment-bubble">
+                    <div class="comment-bubble original-comment">
                         <strong>Phuc Do</strong>
                         <p>Chả hiểu bây giờ trẻ nghĩ gì</p>
                         <p>Đã chơi khuya còn say xỉn thì rằng chịu thôi</p>
+                    </div>
+                    <div class="comment-bubble censored-comment-overlay">
+                        <strong>Phuc Do</strong>
+                        <div class="censored-full-comment">
+                            <span class="censored-mask">Chả hiểu bây giờ trẻ nghĩ gì. Đã chơi khuya còn say xỉn thì rằng chịu thôi</span>
+                            <button class="sensitive-icon" aria-label="Nội dung đã được kiểm duyệt">
+                                <i class="fas fa-eye-slash"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="comment-actions">
                         <span class="comment-time">30 phút</span>
@@ -181,13 +198,22 @@
                 </div>
             </div>
 
-            <!-- Comment 5 -->
-            <div class="comment">
+            <!-- Reply to Comment 4 -->
+            <div class="comment reply censored-comment" data-original="Phuc Do Chỉ này nói đúng ý tui 😂 +1 like" data-reason="inappropriate">
                 <div class="comment-avatar user6">MC</div>
                 <div class="comment-content">
-                    <div class="comment-bubble">
+                    <div class="comment-bubble original-comment">
                         <strong>Manh Chang</strong>
-                        <p>Chỉ này nói đúng ý tui 😂 +1 like</p>
+                        <p><span class="reply-to">Phuc Do</span> Chỉ này nói đúng ý tui 😂 +1 like</p>
+                    </div>
+                    <div class="comment-bubble censored-comment-overlay">
+                        <strong>Manh Chang</strong>
+                        <div class="censored-full-comment">
+                            <span class="censored-mask">Phuc Do Chỉ này nói đúng ý tui 😂 +1 like</span>
+                            <button class="sensitive-icon" aria-label="Nội dung đã được kiểm duyệt">
+                                <i class="fas fa-eye-slash"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="comment-actions">
                         <span class="comment-time">3 phút</span>
@@ -213,33 +239,50 @@
         </div>
     </div>
 
-    <!-- Neutral Reader Trigger Button -->
-    <button id="nr-trigger" class="nr-trigger-btn" title="Activate Neutral Reader">
-        <span class="nr-icon">🔍</span>
-        <span class="nr-label">NR</span>
+    <!-- Safe Mode Toggle Button -->
+    <button id="safe-mode-toggle" class="safe-mode-toggle" title="Toggle Safe Mode">
+        <div class="toggle-icon">
+            <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="toggle-label">Safe Mode</div>
+        <div class="toggle-switch">
+            <div class="toggle-slider"></div>
+        </div>
     </button>
 
-    <!-- Share Modal -->
-    <div id="share-modal" aria-modal="true">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-title">Chia sẻ bài viết trung lập</div>
-                <button class="modal-close" id="modal-close">×</button>
+    <!-- Censorship Explanation Bubble -->
+    <div id="censorship-bubble" class="censorship-bubble" style="display: none;">
+        <div class="bubble-content">
+            <div class="bubble-header">
+                <i class="fas fa-shield-alt"></i>
+                <span>Nội dung đã được kiểm duyệt</span>
             </div>
-            <div class="modal-body">
-                <textarea class="composer-textarea" id="composer-text" placeholder="Bạn đang nghĩ gì?">Original: Xâm hại tình dục bé gái say rượu
-Neutral: Cơ quan chức năng điều tra cáo buộc tấn công tình dục một bé gái</textarea>
+            <div class="bubble-body">
+                <p id="censorship-reason">Nội dung này đã được ẩn do có thể chứa ngôn từ gây tổn thương hoặc đổ lỗi cho nạn nhân.</p>
             </div>
-            <div class="modal-footer">
-                <button class="modal-button secondary" id="modal-cancel">Cancel</button>
-                <button class="modal-button primary" id="modal-post">Post</button>
+            <div class="bubble-actions">
+                <button id="revert-btn" class="bubble-btn primary">Hiển thị</button>
+                <button id="close-bubble-btn" class="bubble-btn secondary">Đóng</button>
             </div>
         </div>
     </div>
 
-    <!-- Toast -->
-    <div id="toast">Đã chia sẻ phiên bản trung lập</div>
+    <!-- Title Explanation Bubble -->
+    <div id="title-bubble" class="title-bubble" style="display: none;">
+        <div class="bubble-content">
+            <div class="bubble-header">
+                <i class="fas fa-edit" style="color: #42b883;"></i>
+                <span>Tiêu đề đã được diễn giải</span>
+            </div>
+            <div class="bubble-body">
+                <p>Tiêu đề này đã được diễn giải lại theo chính sách Safe Mode để loại bỏ ngôn từ có thể gây tổn thương hoặc đổ lỗi cho nạn nhân, đồng thời vẫn giữ nguyên thông tin chính xác.</p>
+            </div>
+            <div class="bubble-actions">
+                <button id="close-title-bubble-btn" class="bubble-btn secondary">Đóng</button>
+            </div>
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="safemode.js"></script>
 </body>
 </html>
