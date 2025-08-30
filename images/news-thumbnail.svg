@@ -1,0 +1,18 @@
+<svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="250" fill="#6c757d"/>
+  
+  <!-- Darker overlay for depth -->
+  <rect x="50" y="50" width="400" height="150" fill="#495057"/>
+  
+  <!-- VnExpress branding -->
+  <text x="70" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">VnExpress</text>
+  <text x="70" y="105" font-family="Arial, sans-serif" font-size="14" fill="#adb5bd">Tin tức pháp luật</text>
+  
+  <!-- Red accent bar -->
+  <rect x="50" y="200" width="100" height="8" fill="#dc3545"/>
+  
+  <!-- News icon -->
+  <circle cx="400" cy="80" r="15" fill="white" opacity="0.8"/>
+  <text x="395" y="85" font-family="Arial, sans-serif" font-size="16" fill="#495057">📰</text>
+</svg>
